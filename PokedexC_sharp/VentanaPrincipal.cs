@@ -39,6 +39,10 @@ namespace PokedexC_sharp
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+            alturaPokemon.Text = misPokemons.Rows[0]["altura"].ToString();
+            pesoPokemon.Text = misPokemons.Rows[0]["peso"].ToString();
+            especiePokemon.Text = misPokemons.Rows[0]["especie"].ToString();
+            habilidadPokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
         }
 
         private void der_Click(object sender, EventArgs e)
@@ -52,6 +56,25 @@ namespace PokedexC_sharp
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+            alturaPokemon.Text = misPokemons.Rows[0]["altura"].ToString();
+            pesoPokemon.Text = misPokemons.Rows[0]["peso"].ToString();
+            especiePokemon.Text = misPokemons.Rows[0]["especie"].ToString();
+            habilidadPokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ventana2 v = new Ventana2();
+            v.cambiaNombrePokemon("Bulbasaur");
+            v.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TodaPokedex v = new TodaPokedex();
+            v.Show();
+
         }
     }
 }
