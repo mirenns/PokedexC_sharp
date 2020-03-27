@@ -20,6 +20,10 @@ namespace PokedexC_sharp
         public VentanaPrincipal()
         {
             InitializeComponent();
+            dataGridView1.DataSource = miConexion.getTodosPokemons();
+            //Para ajustar las dimensiones de la tabla
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
         private Image convierteBlobAImagen(byte[] img) 
@@ -75,6 +79,28 @@ namespace PokedexC_sharp
             TodaPokedex v = new TodaPokedex();
             v.Show();
 
+        }
+
+        //Método para que si pulsas en cualquier elemento del data grid view, te aparezca
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nombrePokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            pictureBox1.Image = convierteBlobAImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagen"].Value);
+            alturaPokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["altura"].Value.ToString();
+            pesoPokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["peso"].Value.ToString();
+            especiePokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["especie"].Value.ToString();
+            habilidadPokemon.Text = dataGridView1.Rows[e.RowIndex].Cells["habilidad"].Value.ToString();
+
+        }
+
+        //Método para poder escribir en la tabla y que se actualice con lo escrito
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            //Sabes qué celda ha sido pulsada
+            String nombre = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            String id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            MessageBox.Show(miConexion.actualizaPokemon(id, nombre));
+            
         }
     }
 }

@@ -42,7 +42,9 @@
             this.pesoPokemon = new System.Windows.Forms.Label();
             this.especiePokemon = new System.Windows.Forms.Label();
             this.habilidadPokemon = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,7 +101,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(751, 699);
+            this.button1.Location = new System.Drawing.Point(737, 700);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 49);
             this.button1.TabIndex = 4;
@@ -197,7 +199,7 @@
             this.especiePokemon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.especiePokemon.Location = new System.Drawing.Point(968, 307);
             this.especiePokemon.Name = "especiePokemon";
-            this.especiePokemon.Size = new System.Drawing.Size(100, 23);
+            this.especiePokemon.Size = new System.Drawing.Size(160, 23);
             this.especiePokemon.TabIndex = 13;
             this.especiePokemon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -208,9 +210,19 @@
             this.habilidadPokemon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.habilidadPokemon.Location = new System.Drawing.Point(968, 373);
             this.habilidadPokemon.Name = "habilidadPokemon";
-            this.habilidadPokemon.Size = new System.Drawing.Size(100, 23);
+            this.habilidadPokemon.Size = new System.Drawing.Size(160, 23);
             this.habilidadPokemon.TabIndex = 14;
             this.habilidadPokemon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(717, 413);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(458, 166);
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // VentanaPrincipal
             // 
@@ -219,6 +231,7 @@
             this.BackgroundImage = global::PokedexC_sharp.Properties.Resources.pokedex;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 832);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.habilidadPokemon);
             this.Controls.Add(this.especiePokemon);
             this.Controls.Add(this.pesoPokemon);
@@ -237,6 +250,7 @@
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,6 +271,7 @@
         private System.Windows.Forms.Label pesoPokemon;
         private System.Windows.Forms.Label especiePokemon;
         private System.Windows.Forms.Label habilidadPokemon;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

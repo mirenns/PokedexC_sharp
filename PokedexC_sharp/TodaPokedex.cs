@@ -18,6 +18,9 @@ namespace PokedexC_sharp
         {
             InitializeComponent();
             dataGridView1.DataSource = conexionPokedex.getTodosPokemons();
+            //Para ajustar las dimensiones de la tabla
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
     }
 }
