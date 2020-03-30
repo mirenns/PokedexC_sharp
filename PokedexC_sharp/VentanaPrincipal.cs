@@ -66,10 +66,16 @@ namespace PokedexC_sharp
             habilidadPokemon.Text = misPokemons.Rows[0]["habilidad"].ToString();
         }
 
+        //Botón que nos lleva a un form con toda la información del Pokemon
         private void button1_Click(object sender, EventArgs e)
         {
             Ventana2 v = new Ventana2();
-            v.cambiaNombrePokemon("Bulbasaur");
+            v.datosPokemon(nombrePokemon.Text, especiePokemon.Text, misPokemons.Rows[0]["habitat"].ToString(), 
+                            alturaPokemon.Text, pesoPokemon.Text, misPokemons.Rows[0]["tipo1"].ToString(),
+                            misPokemons.Rows[0]["tipo2"].ToString(), misPokemons.Rows[0]["movimiento1"].ToString(),
+                            misPokemons.Rows[0]["movimiento2"].ToString(), misPokemons.Rows[0]["movimiento3"].ToString(),
+                            misPokemons.Rows[0]["movimiento4"].ToString(), convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]),
+                            misPokemons.Rows[0]["descripcion"].ToString(), habilidadPokemon.Text);
             v.Show();
 
         }

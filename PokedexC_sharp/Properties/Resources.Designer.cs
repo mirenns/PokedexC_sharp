@@ -63,6 +63,16 @@ namespace PokedexC_sharp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngocean_com {
+            get {
+                object obj = ResourceManager.GetObject("pngocean.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokedex {
             get {
                 object obj = ResourceManager.GetObject("pokedex", resourceCulture);
