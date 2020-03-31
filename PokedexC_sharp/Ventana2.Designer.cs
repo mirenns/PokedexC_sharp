@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventana2));
             this.nombre = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.habilidad = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -281,7 +283,7 @@
             // 
             // descripcion
             // 
-            this.descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.descripcion.BackColor = System.Drawing.Color.IndianRed;
             this.descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descripcion.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descripcion.Location = new System.Drawing.Point(13, 387);
@@ -324,21 +326,31 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::PokedexC_sharp.Properties.Resources.pngocean_com;
-            this.pictureBox2.Location = new System.Drawing.Point(638, 453);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(578, 453);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(153, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe Script", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(719, 453);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(155, 130);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Muriel\'S Pokedex";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Ventana2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(886, 602);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.habilidad);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -365,6 +377,8 @@
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label13);
             this.Name = "Ventana2";
             this.Text = "Ventana2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -402,5 +416,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label habilidad;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label13;
     }
 }

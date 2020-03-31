@@ -65,7 +65,7 @@ namespace PokedexC_sharp.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap pngocean_com {
             get {
-                object obj = ResourceManager.GetObject("pngocean.com", resourceCulture);
+                object obj = ResourceManager.GetObject("pngocean_com", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
